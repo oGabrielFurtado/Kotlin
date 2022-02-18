@@ -1,7 +1,9 @@
-class Venda {
-    var modoPagamento: String? = null
-    var numeroCartao: String? = null
-    var nomeTitularCartao: String? = null
-    var validadeCartao: String? = null
-    var codigoSeguranca: Short? = null
+class Venda(
+    var modoPagamento: String,
+    var numeroCartao: String,
+    var nomeTitularCartao: String
+) {
+    override fun toString(): String {
+        return "Modo de pagamento: $modoPagamento"
+    }
 }
