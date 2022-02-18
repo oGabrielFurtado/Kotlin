@@ -1,9 +1,13 @@
-class Vendedor{
-    var nome: String? = null
-    var sexo: String? = null
-    var idade: Byte? = null
-    var cpf: String? = null
-    var salario: Short? = null
-    var telefoneCelular: String? = null
-    var enderecoResidencial: String? = null
+class Vendedor(
+    var nome: String,
+    var sexo: String,
+    var idade: Byte,
+    var cpf: String,
+    var salario: Float,
+    var telefoneCelular: String,
+    var enderecoResidencial: String
+) {
+    override fun toString(): String {
+        return "Nome do vendedor: $nome  Telefone: $telefoneCelular"
+    }
 }
