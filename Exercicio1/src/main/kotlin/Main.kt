@@ -12,5 +12,5 @@ fun main() {
     print("Digite o terceiro segmento (cm): ")
     val c: Float = readLine()!!.toFloat()
 
-    println(triangle.triangle(a, b, c))
+    println(triangle.calculate(a, b, c))
 }
