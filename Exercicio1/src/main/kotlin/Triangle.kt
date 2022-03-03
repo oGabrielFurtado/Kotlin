@@ -1,5 +1,5 @@
 class Triangle {
-    fun triangle(a: Float, b: Float, c: Float): String {
+    fun calculate(a: Float, b: Float, c: Float): String {
         return if ((a + b) > c && (b + c) > a && (c + a) > b ) {
             if (a == b && b == c) {
                 "Os três segmentos formam um TRIÂNGULO EQUILÁTERO."
