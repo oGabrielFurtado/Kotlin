@@ -1,16 +1,18 @@
+import java.text.SimpleDateFormat
+import java.util.Date
+
 fun main() {
-    val triangle = Triangle()
+    val formatDate = SimpleDateFormat("dd/MM/yyyy")
+    var date = Date()
+    val taxas = Taxas()
 
-    println("Informe três segmentos para saber se eles podem formar um triângulo ou não.")
+    print("""MENU:
+        |Digite N -> para calcular a TAXA DE NATALIDADE;
+        |Digite M -> para calcular a TAXA DE MORTALIDADE.
+        |--> 
+    """.trimMargin())
 
-    print("Digite o primeiro segmento (cm): ")
-    val a: Float = readLine()!!.toFloat()
-
-    print("Digite o segundo segmento (cm): ")
-    val b: Float = readLine()!!.toFloat()
-
-    print("Digite o terceiro segmento (cm): ")
-    val c: Float = readLine()!!.toFloat()
-
-    println(triangle.calculate(a, b, c))
+    taxas.calcularTaxas(readLine()!!.toString().trim().substring(0,1).uppercase())
+    println("")
+    println("Data: ${formatDate.format(date)}")
 }
